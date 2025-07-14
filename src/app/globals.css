@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+    --font-principal: "Poppins", "sans-serif";
+
+    --color-verde-dark: #006400;
+    --color-verde-limao: #00ff00;
+    --color-verde-selecao: #238636;
+
+    --color-cinza-50: #f3f4f6;
+    --color-cinza-100: #edeef1;
+    --color-cinza-200: #d7dbe0;
+    --color-cinza-300: #b3bbc6;
+
+    --color-roxo-100: #574cd5;
+    --color-roxo-250: #3a357a;
+    --color-roxo-300: #231f47;
+
+    --color-laranja-100: #ffda46;
+    --color-laranja-200: #ffc71b;
+    --color-laranja-300: #ffa500;
+    --color-laranja-400: #e27c00;
+    --color-laranja-500: #bb5502;
+    --color-laranja-600: #984208;
+    --color-laranja-700: #7c360b;
+    --color-laranja-800: #481a00;
+
+    --color-azul: #051b44;
+
+    --color-borda-input: #CDD1DB;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.botaoPadrao {
+    @apply w-[400px] max-w-[90%] flex justify-center items-center transition text-xl font-bold bg-azul border border-cinza-50 text-cinza-50 px-6 py-3 rounded shadow-md focus:outline-none focus:ring-4 focus:ring-verde-selecao animate-pulse hover:border-2 hover:transition hover:text-verde-selecao hover:border-verde-selecao hover:animate-none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.letraPula {
+    @apply animate-bounce hover:transition;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.moverBotao {
+    @apply hover:pl-10 hover:pr-5 hover:translate-x-7 hover:transition;
+}
+/*.btn-crud{
+  @apply ;
+}
+.container-input {
+    @apply ;
+} */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root,
+body,
+html {
+    min-height: 100vh;
 }
