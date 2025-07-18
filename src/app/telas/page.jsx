@@ -5,7 +5,7 @@ import Link from "next/link";
 import Animacao from "../comp/Animacao";
 
 const opcoes = [
-    {
+  {
     nome: "Continuar",
     descricao: "Continue da onde parou.",
     links: "/telas/"
@@ -27,17 +27,17 @@ const opcoes = [
   },
   {
     nome: "Configuarasoes",
-    descricao: "Altere volume, controles e preferências visuais.",
+    descricao: "Altere: volume, controles, visual.",
     links: "/telas/configu"
   },
-    {
+  {
     nome: "Voltar",
     descricao: "Voltar para tela inicial.",
     links: "/"
   },
 ];
 
-export default function Page() {
+export default function page() {
   const [selecionado, setSelecionado] = useState(0);
 
   return (
@@ -53,16 +53,16 @@ export default function Page() {
             <button
               key={i}
               onMouseEnter={() => setSelecionado(i)}
-              className={` transition-transform ${i === 0 ? "translate-x-8" :
-                i === 1 ? "translate-x-10" :
-                  i === 2 ? "translate-x-8" :
-                  i === 3 ? "translate-x-6" :
-                    i === 4 ? "translate-x-4  " :
-                      "translate-x-2"
+              className={` transition-transform ${i === 0 ? "translate-x-6" :
+                i === 1 ? "translate-x-8" :
+                  i === 2 ? "translate-x-6" :
+                    i === 3 ? "translate-x-4" :
+                      i === 4 ? "translate-x-2  " :
+                        "translate-x-0"
                 }`}
             >
               {opcao.links ? (
-                <Link className="botaoPadrao moverBotao" href={opcao.links}>{opcao.nome}</Link>
+                <Link className="botaoPadrao moverBotao" href={opcao.links}> <p className="crescerTexto">{opcao.nome}</p></Link>
               ) : (
                 <p>{opcao.button}</p>
               )}
@@ -73,7 +73,11 @@ export default function Page() {
         {/* Descrição lateral */}
         <div className="hidden md:flex flex-1 items-center justify-center pr-10">
           <div className="bg-black/30 p-6 rounded-lg border text-verde-selecao border-verde-selecao text-center text-lg max-w-md">
-            <p className="font-mono animate-type transition border-b-1 letraPula">{opcoes[selecionado].descricao}</p>
+            <h1 className="font-mono animate-type transition border-b-1 letraPula ">
+              <p className="crescerTexto">
+                {opcoes[selecionado].descricao}
+              </p>
+            </h1>
           </div>
         </div>
       </div>

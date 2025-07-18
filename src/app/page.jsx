@@ -19,8 +19,9 @@ export default function page() {
         <Link
           href="/telas"
           className="botaoPadrao "
-        >
-          Pressione qualquer botão
+        ><p className="crescerTexto">
+            Pressione qualquer botão
+          </p>
         </Link>
 
 

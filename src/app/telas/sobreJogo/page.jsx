@@ -3,7 +3,7 @@
 import Animacao from "@/app/comp/Animacao";
 import Link from "next/link";
 
-export default function SobreJogo() {
+export default function page() {
     return (
         <div className="w-full min-h-screen font-sans relative">
             <Animacao />

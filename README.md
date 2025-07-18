@@ -6,8 +6,20 @@ Este é um jogo web feito com [Next.js](https://nextjs.org/), inspirado na mecâ
 
 ## 🚀 Como iniciar o projeto
 
-1. **Instale as dependências**  
+1. **Clone o repositório**  
+Abra o terminal (cmd, PowerShell ou bash) e digite:
+```bash
+git clone https://github.com/jailton-costa/my-game
+
+cd my-game
+
+code . 
+```
+
+2. **Instale as dependências**  
 Abra o terminal na raiz do projeto e execute:
 
 ```bash
-"npm install" logo depois "npm run dev"
+npm install
+
+npm run dev

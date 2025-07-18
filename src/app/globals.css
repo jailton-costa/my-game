@@ -41,10 +41,28 @@
 .moverBotao {
     @apply hover:pl-10 hover:pr-5 hover:translate-x-7 hover:transition;
 }
-/*.btn-crud{
-  @apply ;
+
+@keyframes crescerParaCima {
+
+    0%,
+    100% {
+        transform: scaleY(1);
+        transform-origin: center;
+    }
+
+    50% {
+        transform: scaleY(1.5);
+        transform-origin: center;
+    }
 }
-.container-input {
+
+.crescerTexto {
+    animation: crescerParaCima 2s ease-in-out infinite;
+    display: inline-block;
+    /* importante para a animação funcionar direito */
+}
+
+/*.container-input {
     @apply ;
 } */
 
